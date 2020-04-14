@@ -2,7 +2,7 @@ const main = require("./rateLimiter");
 
 let outputData = "";
 storeLog = (inputs) => (outputData += inputs);
-test("basic console log test case for rateLimiter", () => {
+test("basic console log test case for rateLimiter", async () => {
   console["log"] = jest.fn(storeLog);
   let input = [
     3,
@@ -17,6 +17,25 @@ test("basic console log test case for rateLimiter", () => {
     "I 8",
   ];
   const expectedOutput = [""];
-  main(input);
-  expect(outputData).toBe("START ASTART BSTART C");
+  await main(input);
+  expect(outputData).toBe(
+    "START A,\
+START B,\
+START C,\
+START D,\
+FINISH C,\
+START E,\
+FINISH B,\
+START F,\
+FINISH A,\
+START G,\
+FINISH E,\
+START H,\
+FINISH D,\
+START I,\
+FINISH G,\
+FINISH F,\
+FINISH H,\
+FINISH I,"
+  );
 });

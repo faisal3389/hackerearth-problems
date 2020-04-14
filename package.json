@@ -4,7 +4,9 @@
   "description": "hackerearth problems ",
   "main": "rateLimiter.js",
   "scripts": {
-    "test": "jest"
+    "start": "node rateLimiter.js",
+    "test": "jest",
+    "test-watch": "jest --watchAll #runs all tests"
   },
   "repository": {
     "type": "git",
