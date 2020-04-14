@@ -1,0 +1,28 @@
+{
+  "name": "hackerearth-problems",
+  "version": "1.0.0",
+  "description": "hackerearth problems ",
+  "main": "rateLimiter.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/faisal3389/hackerearth-problems.git"
+  },
+  "keywords": [
+    "hackerearth",
+    "competitive",
+    "programming",
+    "interview"
+  ],
+  "author": "Faisal Siddiqui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faisal3389/hackerearth-problems/issues"
+  },
+  "homepage": "https://github.com/faisal3389/hackerearth-problems#readme",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  }
+}
